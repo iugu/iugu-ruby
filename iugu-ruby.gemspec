@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'iugu/ruby/version'
+require 'iugu/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "iugu-ruby"
-  spec.version       = Iugu::Ruby::VERSION
+  spec.version       = Iugu::VERSION
   spec.authors       = ["TODO: Write your name"]
   spec.email         = ["TODO: Write your email address"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
