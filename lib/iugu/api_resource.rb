@@ -11,18 +11,6 @@ module Iugu
       Iugu.base_uri + object_base_uri + url
     end
 
-    def self.create_from_response(response)
-      Iugu::Factory.create_from_response self.object_type, response
-    end
-
-    def self.create(attributes = {})
-      self.create_from_response APIRequest.request "POST", self.url, attributes
-    end
-
-    def self.fetch(id)
-      self.create_from_response APIRequest.request "GET", self.url(id)
-    end
-
     def is_new?
       @attributes['id'].nil?
     end

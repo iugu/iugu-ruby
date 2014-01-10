@@ -1,4 +1,16 @@
-require "./iugu/version"
+require_relative "iugu/version"
+require_relative "iugu/utils"
+require_relative "iugu/api_request"
+require_relative "iugu/object"
+require_relative "iugu/api_resource"
+require_relative "iugu/factory"
+require_relative "iugu/search_result"
+require_relative "iugu/api_fetch"
+require_relative "iugu/api_create"
+require_relative "iugu/api_save"
+require_relative "iugu/api_delete"
+require_relative "iugu/api_search"
+require_relative "iugu/customer"
 
 module Iugu
   class AuthenticationException < Exception
@@ -8,6 +20,9 @@ module Iugu
   end
 
   class ObjectNotFound < Exception
+  end
+
+  class RequestWithErrors < Exception
   end
 
   class << self
@@ -21,14 +36,3 @@ module Iugu
     "#{@endpoint}/#{@api_version}/"
   end
 end
-
-###
-require "./iugu/utils"
-require "./iugu/api_request"
-require "./iugu/object"
-require "./iugu/factory"
-require "./iugu/api_resource"
-require "./iugu/customer"
-
-Iugu.api_key = "fb35bcd2691e057c86d09f9c3a3a050a"
-###
