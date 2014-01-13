@@ -13,16 +13,16 @@ require_relative "iugu/api_search"
 require_relative "iugu/customer"
 
 module Iugu
-  class AuthenticationException < Exception
+  class AuthenticationException < StandardError
   end
 
-  class RequestFailed < Exception
+  class RequestFailed < StandardError
   end
 
-  class ObjectNotFound < Exception
+  class ObjectNotFound < StandardError
   end
 
-  class RequestWithErrors < Exception
+  class RequestWithErrors < StandardError
   end
 
   class << self
