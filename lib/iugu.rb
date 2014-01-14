@@ -3,6 +3,7 @@ require_relative "iugu/utils"
 require_relative "iugu/api_request"
 require_relative "iugu/object"
 require_relative "iugu/api_resource"
+require_relative "iugu/api_child_resource"
 require_relative "iugu/factory"
 require_relative "iugu/search_result"
 require_relative "iugu/api_fetch"
@@ -11,6 +12,7 @@ require_relative "iugu/api_save"
 require_relative "iugu/api_delete"
 require_relative "iugu/api_search"
 require_relative "iugu/customer"
+require_relative "iugu/payment_method"
 
 module Iugu
   class AuthenticationException < StandardError
