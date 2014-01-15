@@ -30,11 +30,16 @@ module Iugu
     end
 
     def self.object_base_uri
-      case self.object_type
-      when "customer"
+      if self.object_type == "customer"
         object_type = self.object_type + "s"
-      when "payment_method"
+      elsif self.object_type == "payment_method"
         object_type = self.object_type + "s"
+      elsif self.object_type == "invoice"
+        object_type = self.object_type + "s"
+      elsif self.object_type == "subscription"
+        object_type = self.object_type + "s"
+      else
+        object_type = self.object_type
       end
       object_type
     end

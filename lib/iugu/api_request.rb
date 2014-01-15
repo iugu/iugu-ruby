@@ -26,7 +26,7 @@ module Iugu
         verify_ssl: true,
         headers: default_headers,
         method: method,
-        payload: data,
+        payload: data.to_json,
         url: url
       }
     end
@@ -34,7 +34,7 @@ module Iugu
     def self.handle_response(response)
       response_json = JSON.parse(response.body)
       raise ObjectNotFound if response_json.is_a?(Hash) && response_json['errors'] == "Not Found"
-      raise RequestWithErrors, response_json['errors'] if response_json.is_a?(Hash) && response_json['errors']
+      raise RequestWithErrors, response_json['errors'] if response_json.is_a?(Hash) && response_json['errors'] && response_json['errors'].count > 0
       response_json
     rescue JSON::ParserError
       raise RequestFailed
@@ -47,7 +47,8 @@ module Iugu
         accept_charset: 'utf-8',
         user_agent: 'Iugu RubyLibrary',
         accept_language: 'pt-br;q=0.9,pt-BR',
-        content_type: 'application/x-www-form-urlencoded; charset=utf-8'
+        #content_type: 'application/x-www-form-urlencoded; charset=utf-8'
+        content_type: 'application/json; charset=utf-8'
       }
     end
 

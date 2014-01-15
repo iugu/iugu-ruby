@@ -8,5 +8,9 @@ module Iugu
     def payment_methods
       APIChildResource.new({ customer_id: self.id }, Iugu::PaymentMethod)
     end
+
+    def invoices
+      APIChildResource.new({ customer_id: self.id }, Iugu::Invoice)
+    end
   end
 end

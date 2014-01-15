@@ -7,7 +7,7 @@ module Iugu
           results.push Iugu.const_get(Iugu::Utils.camelize(object_type)).new i
         end
         results
-      elsif response['items']
+      elsif response['items'] && response['totalItems']
         results = []
         response['items'].each do |v|
           results.push self.create_from_response(object_type, v)

@@ -13,6 +13,10 @@ require_relative "iugu/api_delete"
 require_relative "iugu/api_search"
 require_relative "iugu/customer"
 require_relative "iugu/payment_method"
+require_relative "iugu/payment_token"
+require_relative "iugu/invoice"
+require_relative "iugu/subscription"
+require_relative "iugu/charge"
 
 module Iugu
   class AuthenticationException < StandardError
