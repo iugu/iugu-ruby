@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Iugu::VERSION
   spec.authors       = ["Marcelo Paez Sequeira"]
   spec.email         = ["marcelo@iugu.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Iugu API}
+  spec.homepage      = "https://iugu.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
