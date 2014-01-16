@@ -23,5 +23,17 @@ module Iugu
     def self.camelize(string)
       string.to_s.gsub(/\/(.?)/) { "::#{$1.upcase}" }.gsub(/(?:^|_)(.)/) { $1.upcase }
     end
+
+    def self.stringify_keys(hash)
+      new_hash = {}
+      hash.each do |key, value|
+        if value.is_a? Hash
+          new_hash[key.to_s] = stringify_keys(value)
+        else
+          new_hash[key.to_s] = value
+        end
+      end
+      new_hash
+    end
   end
 end

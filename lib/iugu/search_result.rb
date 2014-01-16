@@ -2,11 +2,11 @@ module Iugu
   class SearchResult
     def initialize(results, total_results)
       @results = results
-      @total_results = total_results 
+      @total = total_results 
     end
 
     def total
-      @total_results
+      @total
     end
 
     def results

@@ -29,6 +29,11 @@ module Iugu
   end
 
   class RequestWithErrors < StandardError
+    attr_accessor :errors
+
+    def initialize(errors)
+      @errors = errors
+    end
   end
 
   class << self

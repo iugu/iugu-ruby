@@ -5,6 +5,8 @@ describe Iugu::Customer do
     Iugu::Customer.wont_be_nil
   end
 
+=begin
+
   describe "fetching customers" do
     describe "using a correct customer id" do
       before do
@@ -22,7 +24,6 @@ describe Iugu::Customer do
     end
   end
 
-=begin
   describe "fetching customers" do
     describe "using a correct customer id" do
       before do

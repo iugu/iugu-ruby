@@ -12,5 +12,10 @@ module Iugu
     def invoices
       APIChildResource.new({ customer_id: self.id }, Iugu::Invoice)
     end
+
+    def default_payment_method
+      return false unless @attributes['default_payment_method_id']
+      PaymentMethod.fetch({ id: @attributes['default_payment_method_id'], customer_id: self.id })
+    end
   end
 end
