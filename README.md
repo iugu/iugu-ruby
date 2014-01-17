@@ -1,29 +1,54 @@
-# Iugu::Ruby
+# Iugu
 
-TODO: Write a gem description
+Gem para acesso a API da Iugu
 
-## Installation
+## Instalação
 
-Add this line to your application's Gemfile:
+Adicione essa linha ao Gemfile de sua aplicação:
 
-    gem 'iugu-ruby'
+    gem 'iugu'
 
-And then execute:
+Depois execute:
 
     $ bundle
 
-Or install it yourself as:
+Ou instale você mesmo com:
 
-    $ gem install iugu-ruby
+    $ gem install iugu
 
-## Usage
+## Utilização
 
-TODO: Write usage instructions here
+Iugu.api_key = SEU_TOKEN_DE_API
 
-## Contributing
+#### Exemplo de cobrança direta de CC em Ruby
+Iugu::Charge.create(
+      {
+        "token"=> "TOKEN DO IUGU.JS ou LIB",
+        "email"=>"endereço do email do cliente",
+        "months"=>"quantidade de parcelas",
+        "items" => 
+        [
+          {
+            "description"=>"Item Teste",
+            "quantity"=>"1",
+            "price_cents"=>"1000"
+          }
+        ]
+      }
+)
 
-1. Fork it ( http://github.com/<my-github-username>/iugu-ruby/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+#### Exemplo de Gestão de Assinaturas em meia dúzia de linhas. Com direito a pagamento recorrente via Cartão ou Boleto. No caso de Cartão, recomenda-se vincular um token ao customer (Default Payment Method).
+customer = Iugu::Customer.create({
+      "email"=>"EMAIL DO CLIENTE",
+      "name"=>"NOME DO CLIENTE"
+})
+
+subscription = Iugu::Subscription.create({
+"plan_identifier" => "basic_plan", "customer_id" => customer.id
+})
+
+#### Exemplo de Downgrade/Upgrade de Conta (Com cálculo automático de diferença de valores entre planos, créditos, etc)
+subscription.change_plan( "novo_plano" );
+
+#### Histórico de Pagamentos do Cliente
+customer.invoices
