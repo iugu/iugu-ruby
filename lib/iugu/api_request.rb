@@ -31,7 +31,8 @@ module Iugu
         headers: default_headers,
         method: method,
         payload: data.to_json,
-        url: url
+        url: url,
+        timeout: 30
       }
     end
 
