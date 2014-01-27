@@ -5,6 +5,24 @@ module Iugu
     include Iugu::APISave
     include Iugu::APIDelete
 
+    def add_credits(quantity)
+      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("PUT", "#{self.class.url(self.id)}/add_credits", { quantity: quantity }))
+      self.errors = nil
+      true
+    rescue Iugu::RequestWithErrors => ex
+      self.errors = ex.errors
+      false
+    end
+
+    def remove_credits(quantity)
+      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("PUT", "#{self.class.url(self.id)}/remove_credits", { quantity: quantity }))
+      self.errors = nil
+      true
+    rescue Iugu::RequestWithErrors => ex
+      self.errors = ex.errors
+      false
+    end
+
     def suspend
       copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/suspend"))
       self.errors = nil
