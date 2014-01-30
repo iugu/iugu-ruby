@@ -39,7 +39,7 @@ module Iugu
     def self.handle_response(response)
       response_json = JSON.parse(response.body)
       raise ObjectNotFound if response_json.is_a?(Hash) && response_json['errors'] == "Not Found"
-      raise RequestWithErrors, response_json['errors'] if response_json.is_a?(Hash) && response_json['errors'] && response_json['errors'].count > 0
+      raise RequestWithErrors, response_json['errors'] if response_json.is_a?(Hash) && response_json['errors'] && response_json['errors'].length > 0
       response_json
     rescue JSON::ParserError
       raise RequestFailed
