@@ -30,13 +30,8 @@ module Iugu
     end
 
     def self.object_base_uri
-      if self.object_type == "customer"
-        object_type = self.object_type + "s"
-      elsif self.object_type == "payment_method"
-        object_type = self.object_type + "s"
-      elsif self.object_type == "invoice"
-        object_type = self.object_type + "s"
-      elsif self.object_type == "subscription"
+      pluralized_models = ["customer", "payment_method", "invoice", "subscription", "plan"]
+      if pluralized_models.include? self.object_type
         object_type = self.object_type + "s"
       else
         object_type = self.object_type
