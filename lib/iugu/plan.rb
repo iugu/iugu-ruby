@@ -4,13 +4,5 @@ module Iugu
     include Iugu::APICreate
     include Iugu::APISave
     include Iugu::APIDelete
-
-    def prices
-      APIChildResource.new({ plan_id: self.id }, Iugu::PlanPrice)
-    end
-
-    def features
-      APIChildResource.new({ plan_id: self.id }, Iugu::PlanFeature)
-    end
   end
 end

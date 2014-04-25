@@ -18,8 +18,6 @@ require_relative "iugu/invoice"
 require_relative "iugu/subscription"
 require_relative "iugu/charge"
 require_relative "iugu/plan"
-require_relative "iugu/plan_price"
-require_relative "iugu/plan_feature"
 
 module Iugu
   class AuthenticationException < StandardError
