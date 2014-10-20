@@ -13,14 +13,13 @@ module Iugu
     end
 
     def add_accessor(name)
-      metaclass.instance_eval do
-        define_method(name.to_s) { @attributes[name.to_s] }
+      singleton_class.class_eval do
+        define_method(name.to_s) { self.attributes[name.to_s] }
         define_method(name.to_s + "=") do |value|
-          @attributes[name.to_s] = value
-          @unsaved_attributes.add name.to_s
+          self.attributes[name.to_s] = value
+          self.unsaved_attributes.add name.to_s
         end unless name.to_s == 'id'
       end
-      self.class.__send__ :attr_accessor, name.to_sym
     end
 
     def method_missing(name, *args)
@@ -28,6 +27,10 @@ module Iugu
       return super if name.to_s.start_with? 'id'
       add_accessor(name.to_s[0...-1])
       return send(name, args[0])
+    end
+
+    def unsaved_attributes
+      @unsaved_attributes
     end
 
     def attributes
