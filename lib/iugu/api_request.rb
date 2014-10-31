@@ -26,11 +26,12 @@ module Iugu
     end
 
     def self.build_request(method, url, data, authorization_token)
+      data = data.to_json unless data[:multipart]
       {
         verify_ssl: true,
         headers: default_headers(authorization_token),
         method: method,
-        payload: data.to_json,
+        payload: data,
         url: url,
         timeout: 30
       }
