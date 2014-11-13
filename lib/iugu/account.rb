@@ -120,8 +120,28 @@ module Iugu
       )
     end
 
-    # POST /accounts/:account_id/request_withdraw
+    # POST /accounts/transfers
     #
+    # Transfers an amount to another account
+    #
+    # @param [Hash] attributes the values to make a transfer of an account
+    # @param [String] account_id the account_id of account with will receive
+    # @param [String] amount_cents the value in cents that will be transferred
+
+    def self.transfer(attributes)
+      Iugu::Factory.create_from_response(
+        object_type,
+        APIRequest.request(
+          "POST",
+          "#{Iugu.base_uri}transfers",
+          attributes
+        )
+      )
+    end
+
+
+
+
     # Withdraw a value of an account
     #
     # @param [Hash] attributes the values to make a withdrawal of an account
