@@ -141,7 +141,8 @@ module Iugu
 
 
 
-
+    # POST /accounts/:account_id/request_withdraw
+    #
     # Withdraw a value of an account
     #
     # @param [Hash] attributes the values to make a withdrawal of an account
