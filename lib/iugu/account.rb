@@ -162,5 +162,32 @@ module Iugu
         )
       )
     end
+
+    # POST /bank_verification
+    #
+    # Update a bank account
+    #
+    # @param [Hash] attributes the values to update an bank account
+    # @option attributes [Integer] :agency The number of agency
+    # @option attributes [Integer] :account The number of account
+    # @option attributes [String] :account_type The type of account
+    # @option attributes [Integer] :bank The number of the bank account
+    # @option attributes [file] :document Documento for comprove the data of bank account
+
+
+    def self.verify(attributes, user_token)
+      Iugu::Factory.create_from_response(
+        object_type,
+        APIRequest.request(
+          "POST",
+          "#{Iugu.base_uri}/bank_verification",
+          attributes,
+          user_token
+        )
+      )
+    end
+
+
+
   end
 end
