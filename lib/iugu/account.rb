@@ -175,12 +175,12 @@ module Iugu
     # @option attributes [file] :document Documento for comprove the data of bank account
 
 
-    def self.verify(attributes, user_token)
+    def self.bank(attributes, user_token)
       Iugu::Factory.create_from_response(
         object_type,
         APIRequest.request(
           "POST",
-          "#{Iugu.base_uri}/bank_verification",
+          "#{Iugu.base_uri}bank_verification",
           attributes,
           user_token
         )
