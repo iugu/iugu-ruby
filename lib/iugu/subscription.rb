@@ -50,6 +50,10 @@ module Iugu
       false
     end
 
+    def change_plan_simulation(plan_identifier)
+      Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("GET", "#{self.class.url(self.id)}/change_plan_simulation/#{plan_identifier}"))
+    end
+
     def customer
       return false unless @attributes['customer_id']
       Customer.fetch @attributes['customer_id']
