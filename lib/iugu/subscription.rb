@@ -41,8 +41,8 @@ module Iugu
       false
     end
 
-    def change_plan(plan_identifier)
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/change_plan/#{plan_identifier}"))
+    def change_plan(plan_identifier, options = {})
+      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/change_plan/#{plan_identifier}", options))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
