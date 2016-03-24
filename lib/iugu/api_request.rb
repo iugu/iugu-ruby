@@ -20,9 +20,9 @@ module Iugu
     rescue RestClient::ResourceNotFound
       raise ObjectNotFound
     rescue RestClient::UnprocessableEntity => ex
-      raise ex
+      raise JSON.parse(ex.response)['errors']
     rescue RestClient::BadRequest => ex
-      raise ex
+      raise JSON.parse(ex.response)['errors']
     end
 
     def self.build_request(method, url, data, authorization_token)
