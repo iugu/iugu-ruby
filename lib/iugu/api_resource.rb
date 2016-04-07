@@ -15,9 +15,9 @@ module Iugu
     end
 
     def self.endpoint_url
-      Iugu.base_uri + object_base_uri 
+      Iugu.base_uri + object_base_uri
     end
-    
+
     def self.relative_url(options = "")
       if options.is_a?(Hash)
         id = options[:id] || options["id"]
@@ -30,7 +30,7 @@ module Iugu
     end
 
     def self.object_base_uri
-      pluralized_models = ["customer", "payment_method", "invoice", "subscription", "plan"]
+      pluralized_models = ["account", "customer", "payment_method", "invoice", "subscription", "plan"]
       if pluralized_models.include? self.object_type
         object_type = self.object_type + "s"
       else
