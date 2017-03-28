@@ -6,7 +6,6 @@ module Iugu
     include Iugu::APIDelete
 
 	  def self.create_account options = {}
-	  	puts options.inspect
       payload = options[:payload] || options['payload']
       if not payload
       	raise StandardError, 'Missing payload hash'
