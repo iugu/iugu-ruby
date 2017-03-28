@@ -5,8 +5,8 @@ module Iugu
     include Iugu::APISave
     include Iugu::APIDelete
 
-    def self.fetch_by_identifier(identifier)
-      Iugu::Factory.create_from_response(object_type, APIRequest.request("GET", "#{url}/identifier/#{identifier}"))
+    def self.fetch_by_identifier(options = {})
+      Iugu::Factory.create_from_response(object_type, APIRequest.request('GET', url))
     end
   end
 

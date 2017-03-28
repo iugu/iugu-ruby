@@ -2,7 +2,7 @@ module Iugu
   class APIChildResource
     @parent_keys = {}
     @fabricator = nil
-    
+
     def initialize(parent_keys = {}, fabricator)
       @parent_keys = parent_keys
       @fabricator = fabricator

@@ -1,7 +1,12 @@
 module Iugu
   class APIResource < Iugu::Object
     def self.url(options = nil)
-      endpoint_url + self.relative_url(options)
+      puts endpoint_url.inspect
+      if options
+        endpoint_url + self.relative_url(options)
+      else
+        endpoint_url
+      end
     end
 
     def is_new?
@@ -15,9 +20,9 @@ module Iugu
     end
 
     def self.endpoint_url
-      Iugu.base_uri + object_base_uri 
+      Iugu.base_uri + object_base_uri
     end
-    
+
     def self.relative_url(options = "")
       if options.is_a?(Hash)
         id = options[:id] || options["id"]
