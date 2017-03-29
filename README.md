@@ -6,19 +6,18 @@ Gem para acesso a API da Iugu
 
 Adicione essa linha ao Gemfile de sua aplicação:
 
-    gem 'iugu'
-
+    gem 'iugu', github: 'Blumpa/iugu-ruby'
 Depois execute:
 
-    $ bundle
+    $ bundle install
 
-Ou instale você mesmo com:
-
-    $ gem install iugu
+## Documentação para usar o marketplace
+https://github.com/Blumpa/iugu-ruby/wiki/Marketplace
 
 ## Exemplos de Uso
 
 ~~~
+
 # Configure seu api key
 Iugu.api_key = SEU_TOKEN_DE_API
 
