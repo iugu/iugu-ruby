@@ -19,6 +19,9 @@ Ou instale você mesmo com:
 ## Exemplos de Uso
 
 ~~~
+# Documentação para usar o marketplace
+ [Ver exemplos para Marketplace](https://github.com/Blumpa/iugu-ruby/wiki/Marketplace)
+
 # Configure seu api key
 Iugu.api_key = SEU_TOKEN_DE_API
 
