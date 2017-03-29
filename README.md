@@ -11,11 +11,12 @@ Depois execute:
 
     $ bundle install
 
+## Documentação para usar o marketplace
+https://github.com/Blumpa/iugu-ruby/wiki/Marketplace
+
 ## Exemplos de Uso
 
 ~~~
-# Documentação para usar o marketplace
-https://github.com/Blumpa/iugu-ruby/wiki/Marketplace
 
 # Configure seu api key
 Iugu.api_key = SEU_TOKEN_DE_API
