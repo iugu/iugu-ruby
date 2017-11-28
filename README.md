@@ -18,7 +18,7 @@ Ou instale você mesmo com:
 
 ## Exemplos de Uso
 
-~~~
+```ruby
 # Configure seu api key
 Iugu.api_key = SEU_TOKEN_DE_API
 
@@ -54,4 +54,4 @@ subscription.change_plan( "novo_plano" );
 
 # Histórico de Pagamentos do Cliente
 customer.invoices
-~~~
+```
