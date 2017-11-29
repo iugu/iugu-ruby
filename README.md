@@ -1,5 +1,9 @@
 # Iugu
 
+[![Build status](https://img.shields.io/travis/iugu/iugu-ruby.svg)](https://travis-ci.org/iugu/iugu-ruby)
+[![Gem version](https://img.shields.io/gem/v/iugu.svg)](https://rubygems.org/gems/iugu)
+[![Downloads](https://img.shields.io/gem/dt/iugu.svg)](https://rubygems.org/gems/iugu)
+
 Gem para acesso a API da Iugu
 
 ## Instalação
@@ -28,7 +32,7 @@ Iugu::Charge.create(
         "token"=> "TOKEN DO IUGU.JS ou LIB",
         "email"=>"endereço do email do cliente",
         "months"=>"quantidade de parcelas",
-        "items" => 
+        "items" =>
         [
           {
             "description"=>"Item Teste",
