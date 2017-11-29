@@ -5,7 +5,7 @@ module Iugu
     def success
       @attributes["success"] || false
     end
-    
+
     def invoice
       return false unless @attributes['invoice_id']
       Invoice.fetch @attributes['invoice_id']

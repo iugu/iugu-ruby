@@ -15,9 +15,9 @@ module Iugu
     end
 
     def self.endpoint_url
-      Iugu.base_uri + object_base_uri 
+      Iugu.base_uri + object_base_uri
     end
-    
+
     def self.relative_url(options = "")
       if options.is_a?(Hash)
         id = options[:id] || options["id"]
