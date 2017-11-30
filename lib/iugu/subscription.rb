@@ -41,13 +41,19 @@ module Iugu
       false
     end
 
-    def change_plan(plan_identifier)
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/change_plan/#{plan_identifier}"))
+    def change_plan(plan_identifier, options = {})
+      options.merge!({ plan_identifier: plan_identifier })
+      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/change_plan", options))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
       self.errors = ex.errors
       false
+    end
+
+    def change_plan_simulation(plan_identifier, options = {})
+      options.merge!({ plan_identifier: plan_identifier })
+      Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("GET", "#{self.class.url(self.id)}/change_plan_simulation", options))
     end
 
     def customer
