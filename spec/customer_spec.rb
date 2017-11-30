@@ -74,4 +74,39 @@ describe Iugu::Customer do
       expect(customer.name).to eq('John Snow')
     end
   end
+
+  describe '.save', :vcr do
+    it 'should save the customer' do
+      customer = Iugu::Customer.create(email: 'john.snow@greatwall.com',
+                                       name: 'John Snow',
+                                       cpf_cnpj: '648.144.103-01',
+                                       cc_emails: 'heisenberg@lospolloshermanos.com',
+                                       zip_code: '29190560',
+                                       number: '8',
+                                       street: 'Rua dos Bobos',
+                                       city: 'São Paulo',
+                                       state: 'SP',
+                                       district: 'Mooca',
+                                       complement: '123C')
+
+      customer.name = 'John Targaryen'
+      customer.cnpj = '24.357.272/7919-90'
+      customer.cc_emails = 'kalise@lovedragons.com'
+      customer.zip_code = '13058676'
+      customer.number = '+9000'
+      customer.street = 'Rua Rio Palmital'
+      customer.district = 'Tatuapé'
+      customer.complement = '321A'
+
+      customer.save
+
+      new_customer = Iugu::Customer.fetch(id: customer.id)
+
+      expect(new_customer.zip_code).to eq('13058676')
+      expect(new_customer.number).to eq('+9000')
+      expect(new_customer.street).to eq('Rua Rio Palmital')
+      expect(new_customer.district).to eq('Tatuapé')
+      expect(new_customer.complement).to eq('321A')
+    end
+  end
 end
