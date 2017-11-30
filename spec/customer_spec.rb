@@ -109,4 +109,25 @@ describe Iugu::Customer do
       expect(new_customer.complement).to eq('321A')
     end
   end
+
+  describe '.delete', :vcr do
+    it 'should save the customer' do
+      customer = Iugu::Customer.create(email: 'john.snow@greatwall.com',
+                                       name: 'John Snow',
+                                       cpf_cnpj: '648.144.103-01',
+                                       cc_emails: 'heisenberg@lospolloshermanos.com',
+                                       zip_code: '29190560',
+                                       number: '8',
+                                       street: 'Rua dos Bobos',
+                                       city: 'São Paulo',
+                                       state: 'SP',
+                                       district: 'Mooca',
+                                       complement: '123C')
+      customer.delete
+
+      expect {
+        Iugu::Customer.fetch(id: customer.id)
+      }.to raise_error(Iugu::ObjectNotFound)
+    end
+  end
 end
