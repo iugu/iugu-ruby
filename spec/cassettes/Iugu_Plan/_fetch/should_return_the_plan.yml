@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/plans/identifier/medium
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 17:24:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/plan#identifier
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"b94c3671f44be2722c146d5bad6c7bcc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c7b964cadf2ab22889343b758e4292a4
+      X-Runtime:
+      - '0.044171'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"FE66F090BDAE475FA41295C232D92965","name":"Medium","identifier":"medium","interval":1,"interval_type":"months","created_at":"2017-11-30T15:24:37-02:00","updated_at":"2017-11-30T15:24:37-02:00","prices":[{"created_at":"2017-11-30T15:24:37-02:00","currency":"BRL","id":"D9208488369B4F758764E073D8FC477E","plan_id":"FE66F090BDAE475FA41295C232D92965","updated_at":"2017-11-30T15:24:37-02:00","value_cents":10000}],"features":[],"payable_with":"all"}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:24:41 GMT
+recorded_with: VCR 3.0.3
