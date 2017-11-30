@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/customers
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 15:27:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/customer#index
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"b87c10942426fa38ccbb8e1242dd691e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ee76181513356936a0a9653c6c1cc7d1
+      X-Runtime:
+      - '0.114559'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"totalItems":15,"items":[{"id":"2D3309067D0047B7AD55F38EBA0BA406","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-30T13:21:10-02:00","updated_at":"2017-11-30T13:21:10-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"18F6EE8B11524122AB317D9009CD8DE0","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-30T13:20:53-02:00","updated_at":"2017-11-30T13:20:53-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"E2CDC5A53FC845E6A88DF6C50672E963","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:45:28-02:00","updated_at":"2017-11-29T16:45:28-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"C1597B05483941BFB15BA3029899153A","email":"john.snow@greatwall.com","name":"John
+        Snow4","notes":null,"created_at":"2017-11-29T16:44:34-02:00","updated_at":"2017-11-29T16:44:34-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"D345643C328B4756988E1F90D54DC058","email":"john.snow@greatwall.com","name":"John
+        Snow2","notes":null,"created_at":"2017-11-29T16:41:45-02:00","updated_at":"2017-11-29T16:41:45-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"B64C5D999F244F628B89F6F2B61F2247","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:40:35-02:00","updated_at":"2017-11-29T16:40:35-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"E2CABA43E36A472D9EFE26B5CA614270","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:40:24-02:00","updated_at":"2017-11-29T16:40:24-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"C9176BA23C4F4F6892DD5F5F70917EE8","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:39:46-02:00","updated_at":"2017-11-29T16:39:46-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"3E029F4F73004C64BDD2483981FA7E6F","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:31:41-02:00","updated_at":"2017-11-29T16:31:41-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"3FCD60D6DCC54969A1FF60C6B2B5DE90","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:29:13-02:00","updated_at":"2017-11-29T16:29:13-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"725BD3BE2E66495FB28C6902614DDE7E","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:28:52-02:00","updated_at":"2017-11-29T16:28:52-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"EEC664FDF3864D7FBDCE66BA6579B9CE","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:28:41-02:00","updated_at":"2017-11-29T16:28:41-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"0A46037154474939B4A522109CD76FA6","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:23:32-02:00","updated_at":"2017-11-29T16:23:32-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"EAE6433A5EFC4187A4C5F4FC7393E271","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:23:19-02:00","updated_at":"2017-11-29T16:23:19-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]},{"id":"AA9344129914412FA7F8D4E71E968935","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-29T16:22:23-02:00","updated_at":"2017-11-29T16:22:23-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]}]}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 15:27:30 GMT
+recorded_with: VCR 3.0.3

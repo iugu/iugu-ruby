@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/customers/2D3309067D0047B7AD55F38EBA0BA406
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 16:21:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/customer#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"ff6db8a5ca813d1a0b29b65fe142a2f3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0db5e30fa5cefcdbcdac31c850a26083
+      X-Runtime:
+      - '0.042258'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"2D3309067D0047B7AD55F38EBA0BA406","email":"john.snow@greatwall.com","name":"John
+        Snow","notes":null,"created_at":"2017-11-30T13:21:10-02:00","updated_at":"2017-11-30T13:21:10-02:00","cc_emails":null,"cpf_cnpj":null,"zip_code":null,"number":null,"complement":null,"default_payment_method_id":null,"proxy_payments_from_customer_id":null,"city":null,"state":null,"district":null,"street":null,"custom_variables":[]}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 16:21:01 GMT
+recorded_with: VCR 3.0.3
