@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/customers
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 16:18:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/customer#create
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 2108f0b5e44763b65073430b4286852f
+      X-Runtime:
+      - '0.063126'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"email":["n\u00e3o pode ficar em branco","n\u00e3o \u00e9
+        v\u00e1lido"]}}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 16:18:09 GMT
+recorded_with: VCR 3.0.3
