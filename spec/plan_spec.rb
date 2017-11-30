@@ -25,8 +25,8 @@ describe Iugu::Plan do
       expect(plan.total).to eq(2)
     end
 
-    it 'should return the customer', :vcr do
-      plan = Iugu::Plan.fetch(id: 'FB088FDB05C14DFBB72AC087E00BB257')
+    it 'should return the plan', :vcr do
+      plan = Iugu::Plan.fetch_by_identifier('medium')
 
       expect(plan.name).to eq('Medium')
       expect(plan.identifier).to eq('medium')
@@ -38,7 +38,7 @@ describe Iugu::Plan do
 
   describe '.save' do
     it 'should save the plan', :vcr do
-      plan = Iugu::Plan.fetch(id: 'FB088FDB05C14DFBB72AC087E00BB257')
+      plan = Iugu::Plan.fetch_by_identifier('medium')
 
       plan.name = 'Super Medium'
       plan.value_cents = '12000'
@@ -53,8 +53,8 @@ describe Iugu::Plan do
   end
 
   describe '.delete' do
-    it 'should save the customer', :vcr do
-      plan = Iugu::Plan.fetch(id: 'FB088FDB05C14DFBB72AC087E00BB257')
+    it 'should delete the plan', :vcr do
+      plan = Iugu::Plan.fetch_by_identifier('medium')
 
       plan.delete
 
