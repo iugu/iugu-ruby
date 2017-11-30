@@ -67,7 +67,7 @@ describe Iugu::Customer do
       expect(customers.total).to eq(15)
     end
 
-    xit 'should return the customer', :vcr do
+    it 'should return the customer', :vcr do
       customer = Iugu::Customer.fetch(id: '2D3309067D0047B7AD55F38EBA0BA406')
 
       expect(customer.email).to eq('john.snow@greatwall.com')
