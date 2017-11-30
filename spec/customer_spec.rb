@@ -110,8 +110,8 @@ describe Iugu::Customer do
     end
   end
 
-  describe '.delete', :vcr do
-    it 'should save the customer' do
+  describe '.delete' do
+    it 'should save the customer', :vcr do
       customer = Iugu::Customer.create(email: 'john.snow@greatwall.com',
                                        name: 'John Snow',
                                        cpf_cnpj: '648.144.103-01',
