@@ -1,0 +1,180 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/plans/FB088FDB05C14DFBB72AC087E00BB257
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 17:15:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/plan#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"c65a6aeaa3bb9a34f4db64e463933443"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 070ffbc181ac2de1b8bb9910b88ba7f9
+      X-Runtime:
+      - '0.074317'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"FB088FDB05C14DFBB72AC087E00BB257","name":"Super Medium","identifier":"medium","interval":1,"interval_type":"months","created_at":"2017-11-30T15:07:51-02:00","updated_at":"2017-11-30T15:13:45-02:00","prices":[{"created_at":"2017-11-30T15:07:51-02:00","currency":"BRL","id":"B0EF069893084A9A8AE0C6BCBF1B3A5F","plan_id":"FB088FDB05C14DFBB72AC087E00BB257","updated_at":"2017-11-30T15:13:45-02:00","value_cents":12000}],"features":[],"payable_with":"all"}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:15:45 GMT
+- request:
+    method: put
+    uri: http://api.iugu.dev/v1/plans/FB088FDB05C14DFBB72AC087E00BB257
+    body:
+      encoding: UTF-8
+      string: '{"name":"Super Medium","value_cents":"12000"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 17:15:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/plan#update
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"171bf4f6209411b90451f7b3a1e91e47"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0e0e823ec14587b42cd07359df2bca05
+      X-Runtime:
+      - '0.094042'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"FB088FDB05C14DFBB72AC087E00BB257","name":"Super Medium","identifier":"medium","interval":1,"interval_type":"months","created_at":"2017-11-30T15:07:51-02:00","updated_at":"2017-11-30T15:15:45-02:00","prices":[{"created_at":"2017-11-30T15:07:51-02:00","currency":"BRL","id":"B0EF069893084A9A8AE0C6BCBF1B3A5F","plan_id":"FB088FDB05C14DFBB72AC087E00BB257","updated_at":"2017-11-30T15:13:45-02:00","value_cents":12000}],"features":[],"payable_with":"all"}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:15:45 GMT
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/plans/FB088FDB05C14DFBB72AC087E00BB257
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 17:15:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/plan#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"171bf4f6209411b90451f7b3a1e91e47"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0d13d120ed826d87f031abe4069372ae
+      X-Runtime:
+      - '0.099220'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"FB088FDB05C14DFBB72AC087E00BB257","name":"Super Medium","identifier":"medium","interval":1,"interval_type":"months","created_at":"2017-11-30T15:07:51-02:00","updated_at":"2017-11-30T15:15:45-02:00","prices":[{"created_at":"2017-11-30T15:07:51-02:00","currency":"BRL","id":"B0EF069893084A9A8AE0C6BCBF1B3A5F","plan_id":"FB088FDB05C14DFBB72AC087E00BB257","updated_at":"2017-11-30T15:13:45-02:00","value_cents":12000}],"features":[],"payable_with":"all"}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:15:45 GMT
+recorded_with: VCR 3.0.3

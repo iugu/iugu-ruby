@@ -125,9 +125,7 @@ describe Iugu::Customer do
                                        complement: '123C')
       customer.delete
 
-      expect {
-        Iugu::Customer.fetch(id: customer.id)
-      }.to raise_error(Iugu::ObjectNotFound)
+      expect { Iugu::Customer.fetch(id: customer.id) }.to raise_error(Iugu::ObjectNotFound)
     end
   end
 end

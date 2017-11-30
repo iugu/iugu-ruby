@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/plans
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 30 Nov 2017 17:10:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/plan#index
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"3097e234d22258166bddd6807069bb7e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c43705e7dd9608800b1ae1f50a9e27c5
+      X-Runtime:
+      - '0.076842'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"totalItems":2,"items":[{"id":"FB088FDB05C14DFBB72AC087E00BB257","name":"Medium","identifier":"medium","interval":1,"interval_type":"months","created_at":"2017-11-30T15:07:51-02:00","updated_at":"2017-11-30T15:07:51-02:00","prices":[{"created_at":"2017-11-30T15:07:51-02:00","currency":"BRL","id":"B0EF069893084A9A8AE0C6BCBF1B3A5F","updated_at":"2017-11-30T15:07:51-02:00","value_cents":10000}],"features":[],"payable_with":"all"},{"id":"B71DC3FC46264C85B948AD9DC31F37C8","name":"basic","identifier":"basic","interval":1,"interval_type":"months","created_at":"2017-11-30T13:31:50-02:00","updated_at":"2017-11-30T13:31:50-02:00","prices":[{"created_at":"2017-11-30T13:31:50-02:00","currency":"BRL","id":"5E56F54EB7B6473A90857B3DB1AB7E72","updated_at":"2017-11-30T13:31:50-02:00","value_cents":10000}],"features":[],"payable_with":"all"}]}'
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:10:19 GMT
+recorded_with: VCR 3.0.3
