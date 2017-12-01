@@ -51,3 +51,7 @@ subscription.change_plan('novo_plano')
 # Histórico de Pagamentos do Cliente
 customer.invoices
 ```
+
+## Documentação
+
+A API da Iugu tem uma documentação pública e disponível no [link](https://dev.iugu.com/v1.0/reference).
