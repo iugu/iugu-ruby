@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/invoices
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.1
+      Date:
+      - Fri, 01 Dec 2017 01:47:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/invoice#index
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"0801aa5f1f7ebcd924937267ad7db825"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ace995a52e3f196229ff936f2e2fa6ec
+      X-Runtime:
+      - '0.892379'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"facets":{"late":{"_type":"filter","count":0},"status":{"_type":"terms","missing":0,"other":0,"terms":[{"term":"pending","count":3},{"term":"paid","count":2}],"total":5}},"totalItems":5,"items":[{"id":"81CCCE997C034F38AC378F1481CA5AA3","due_date":"2017-11-30","currency":"BRL","discount_cents":null,"email":"homer@simpsom.com","notification_url":null,"return_url":null,"status":"pending","tax_cents":null,"updated_at":"2017-11-30T23:42:06-02:00","total_cents":9900,"total_paid_cents":0,"paid_at":null,"taxes_paid_cents":null,"paid_cents":null,"cc_emails":null,"payable_with":"all","overpaid_cents":null,"ignore_due_email":null,"ignore_canceled_email":null,"advance_fee_cents":null,"commission_cents":null,"early_payment_discount":false,"secure_id":"81ccce99-7c03-4f38-ac37-8f1481ca5aa3-ba5e","secure_url":"http://faturas.iugu.dev/81ccce99-7c03-4f38-ac37-8f1481ca5aa3-ba5e","customer_id":null,"customer_ref":null,"customer_name":null,"user_id":null,"total":"R$
+        99,00","taxes_paid":"R$ 0,00","total_paid":"R$ 0,00","total_overpaid":"R$
+        0,00","commission":"R$ 0,00","fines_on_occurrence_day":null,"total_on_occurrence_day":null,"fines_on_occurrence_day_cents":null,"total_on_occurrence_day_cents":null,"financial_return_date":null,"advance_fee":null,"paid":"R$
+        0,00","interest":null,"discount":null,"created_at":"30/11, 23:42 h","refundable":null,"installments":null,"transaction_number":29093806,"payment_method":null,"created_at_iso":"2017-11-30T23:42:06-02:00","updated_at_iso":"2017-11-30T23:42:06-02:00","occurrence_date":null,"financial_return_dates":null,"bank_slip":null,"items":[{"id":"CC4FF2290F024A059C9CFBC3C8004633","description":"Rosquinha","price_cents":100,"quantity":99,"created_at":"2017-11-30T23:42:06-02:00","updated_at":"2017-11-30T23:42:06-02:00","price":"R$
+        1,00"}],"early_payment_discounts":[],"variables":[{"id":"0E32ED167B38433E8050FF457E1BFE5D","variable":"payment_data.transaction_number","value":"29093806"}],"custom_variables":[],"logs":[{"id":"3662A9FCD09F4A0E856D44AB32CB4F28","description":"Due
+        email sent!","notes":"Successfully sent due to: homer@simpsom.com","created_at":"30/11,
+        23:42 h"}]},{"id":"2D7B949C2344436E8AA50CAEA0FDFCE5","due_date":"2017-11-30","currency":"BRL","discount_cents":null,"email":"homer@simpsom.com","notification_url":null,"return_url":null,"status":"pending","tax_cents":null,"updated_at":"2017-11-30T23:35:52-02:00","total_cents":9900,"total_paid_cents":0,"paid_at":null,"taxes_paid_cents":null,"paid_cents":null,"cc_emails":null,"payable_with":"all","overpaid_cents":null,"ignore_due_email":null,"ignore_canceled_email":null,"advance_fee_cents":null,"commission_cents":null,"early_payment_discount":false,"secure_id":"2d7b949c-2344-436e-8aa5-0caea0fdfce5-824f","secure_url":"http://faturas.iugu.dev/2d7b949c-2344-436e-8aa5-0caea0fdfce5-824f","customer_id":null,"customer_ref":null,"customer_name":null,"user_id":null,"total":"R$
+        99,00","taxes_paid":"R$ 0,00","total_paid":"R$ 0,00","total_overpaid":"R$
+        0,00","commission":"R$ 0,00","fines_on_occurrence_day":null,"total_on_occurrence_day":null,"fines_on_occurrence_day_cents":null,"total_on_occurrence_day_cents":null,"financial_return_date":null,"advance_fee":null,"paid":"R$
+        0,00","interest":null,"discount":null,"created_at":"30/11, 23:35 h","refundable":null,"installments":null,"transaction_number":17319358,"payment_method":null,"created_at_iso":"2017-11-30T23:35:52-02:00","updated_at_iso":"2017-11-30T23:35:52-02:00","occurrence_date":null,"financial_return_dates":null,"bank_slip":null,"items":[{"id":"704B9D3F317E48B9814532D3FA0994CE","description":"Rosquinha","price_cents":100,"quantity":99,"created_at":"2017-11-30T23:35:52-02:00","updated_at":"2017-11-30T23:35:52-02:00","price":"R$
+        1,00"}],"early_payment_discounts":[],"variables":[{"id":"75CFD655BC36488EB43D7EC647A87EDF","variable":"payment_data.transaction_number","value":"17319358"}],"custom_variables":[],"logs":[{"id":"9C7F5E0667934CFBA36DBB0ABF99D656","description":"Due
+        email sent!","notes":"Successfully sent due to: homer@simpsom.com","created_at":"30/11,
+        23:35 h"}]},{"id":"C302773ACC7F46488122BD1887FACCC8","due_date":"2017-11-30","currency":"BRL","discount_cents":null,"email":"homer@simpsom.com","notification_url":null,"return_url":null,"status":"pending","tax_cents":null,"updated_at":"2017-11-30T23:32:47-02:00","total_cents":9900,"total_paid_cents":0,"paid_at":null,"taxes_paid_cents":null,"paid_cents":null,"cc_emails":null,"payable_with":"all","overpaid_cents":null,"ignore_due_email":null,"ignore_canceled_email":null,"advance_fee_cents":null,"commission_cents":null,"early_payment_discount":false,"secure_id":"c302773a-cc7f-4648-8122-bd1887faccc8-9cc7","secure_url":"http://faturas.iugu.dev/c302773a-cc7f-4648-8122-bd1887faccc8-9cc7","customer_id":null,"customer_ref":null,"customer_name":null,"user_id":null,"total":"R$
+        99,00","taxes_paid":"R$ 0,00","total_paid":"R$ 0,00","total_overpaid":"R$
+        0,00","commission":"R$ 0,00","fines_on_occurrence_day":null,"total_on_occurrence_day":null,"fines_on_occurrence_day_cents":null,"total_on_occurrence_day_cents":null,"financial_return_date":null,"advance_fee":null,"paid":"R$
+        0,00","interest":null,"discount":null,"created_at":"30/11, 23:32 h","refundable":null,"installments":null,"transaction_number":9363126,"payment_method":null,"created_at_iso":"2017-11-30T23:32:47-02:00","updated_at_iso":"2017-11-30T23:32:47-02:00","occurrence_date":null,"financial_return_dates":null,"bank_slip":null,"items":[{"id":"4C45B5E0D4B1409BB6A4347066D99EBD","description":"Rosquinha","price_cents":100,"quantity":99,"created_at":"2017-11-30T23:32:47-02:00","updated_at":"2017-11-30T23:32:47-02:00","price":"R$
+        1,00"}],"early_payment_discounts":[],"variables":[{"id":"3EB2162E268A48B9A64419F0F6D6589F","variable":"payment_data.transaction_number","value":"9363126"}],"custom_variables":[],"logs":[{"id":"F3B1A0A1A2644647A551514B74C092A5","description":"Due
+        email sent!","notes":"Successfully sent due to: homer@simpsom.com","created_at":"30/11,
+        23:32 h"}]},{"id":"BF07B6327DE847FB90B279D88D042D30","due_date":"2017-11-23","currency":"BRL","discount_cents":null,"email":"alepaezseq@gmail.com","notification_url":null,"return_url":null,"status":"paid","tax_cents":null,"updated_at":"2017-11-23T17:20:43-02:00","total_cents":50000,"total_paid_cents":50000,"paid_at":"2017-11-23T17:20:43-02:00","taxes_paid_cents":2280,"paid_cents":50000,"cc_emails":"","payable_with":"credit_card","overpaid_cents":null,"ignore_due_email":null,"ignore_canceled_email":null,"advance_fee_cents":6929,"commission_cents":0,"early_payment_discount":false,"secure_id":"bf07b632-7de8-47fb-90b2-79d88d042d30-f09b","secure_url":"http://faturas.iugu.dev/bf07b632-7de8-47fb-90b2-79d88d042d30-f09b","customer_id":null,"customer_ref":null,"customer_name":null,"user_id":null,"total":"R$
+        500,00","taxes_paid":"R$ 22,80","total_paid":"R$ 500,00","total_overpaid":"R$
+        0,00","commission":"R$ 0,00","fines_on_occurrence_day":"R$ 0,00","total_on_occurrence_day":"R$
+        500,00","fines_on_occurrence_day_cents":0,"total_on_occurrence_day_cents":50000,"financial_return_date":null,"advance_fee":"69.29
+        BRL","paid":"R$ 500,00","interest":null,"discount":null,"created_at":"23/11,
+        17:18 h","refundable":null,"installments":"12","transaction_number":49918791,"payment_method":"iugu_credit_card","created_at_iso":"2017-11-23T17:18:57-02:00","updated_at_iso":"2017-11-23T17:20:43-02:00","occurrence_date":null,"financial_return_dates":[{"id":3,"installment":1,"return_date":"2017-12-23","status":"done","amount":"R$
+        39,84","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":4,"installment":2,"return_date":"2018-01-22","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":5,"installment":3,"return_date":"2018-02-21","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":6,"installment":4,"return_date":"2018-03-23","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":7,"installment":5,"return_date":"2018-04-22","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":8,"installment":6,"return_date":"2018-05-22","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":9,"installment":7,"return_date":"2018-06-21","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":10,"installment":8,"return_date":"2018-07-21","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":11,"installment":9,"return_date":"2018-08-20","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":12,"installment":10,"return_date":"2018-09-19","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":13,"installment":11,"return_date":"2018-10-19","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true},{"id":14,"installment":12,"return_date":"2018-11-18","status":"done","amount":"R$
+        39,76","taxes":"R$ 1,90","executed_date":"23/11, 17:21 h","advanced":true}],"bank_slip":null,"items":[{"id":"DA95CB2D95FB47ADAAD707A59E98B704","description":"teste","price_cents":50000,"quantity":1,"created_at":"2017-11-23T17:18:57-02:00","updated_at":"2017-11-23T17:18:57-02:00","price":"R$
+        500,00"}],"early_payment_discounts":[],"variables":[{"id":"3F6073FC6A6C4FF7983579DB31474EEE","variable":"hl","value":"en"},{"id":"02FE6F7D0762417A868FED1055533E18","variable":"payment_data.arp","value":"00000"},{"id":"F09E780EA06F4A28AD8FE5ECD0469A42","variable":"payment_data.display_number","value":"XXXX-XXXX-XXXX-1111"},{"id":"E6685DDDA29942E1B5B03DD098AD211C","variable":"payment_data.holder_name","value":"teste
+        teste"},{"id":"F1FBFB81321547D5BEEF05408CC21B78","variable":"payment_data.installments","value":"12"},{"id":"9C71629DE0B94FA3BF5BB842C201ED34","variable":"payment_data.nsu","value":"00000"},{"id":"C1E4DC0E12EF4C1D87A5084B3B85B913","variable":"payment_data.transaction_id","value":"00000000000000000001"},{"id":"226447A925824D04939BC115603C2F79","variable":"payment_data.transaction_number","value":"49918791"},{"id":"45103E4C8D8C4B7B861BFF8261C747CF","variable":"payment_method","value":"iugu_credit_card"}],"custom_variables":[],"logs":[{"id":"D71318590D864DF5A7F5BFF7054FED3F","description":"Invoice
+        viewed!","notes":"Invoice viewed!  ","created_at":"23/11, 17:20 h"},{"id":"5630DCE4D7FD4E82B8D2B64B5B04AEE6","description":"Receipt
+        email sent!","notes":"Successfully sent receipt to: alepaezseq@gmail.com","created_at":"23/11,
+        17:20 h"},{"id":"CE3DDD6FC3644F868CB981EC94132A14","description":"Invoice
+        successfully paid!","notes":"Invoice paid using credit card by:  teste teste,
+        VISA, XXXXXXXXXXXX1111, LR: 00","created_at":"23/11, 17:20 h"},{"id":"0F15416FBCA943D0BB386EA49942B0F0","description":"Invoice
+        viewed!","notes":"Invoice viewed!  ","created_at":"23/11, 17:19 h"},{"id":"FB8C157A7A584922B021DC55FA8A8C99","description":"Due
+        email sent!","notes":"Successfully sent due to: alepaezseq@gmail.com","created_at":"23/11,
+        17:18 h"}]},{"id":"39BE85E98F5343DFB3541780E09B09FD","due_date":"2017-11-21","currency":"BRL","discount_cents":null,"email":"alepaezseq@gmail.com","notification_url":null,"return_url":null,"status":"paid","tax_cents":null,"updated_at":"2017-11-23T17:19:08-02:00","total_cents":25000,"total_paid_cents":25000,"paid_at":"2017-11-23T17:19:08-02:00","taxes_paid_cents":1155,"paid_cents":25000,"cc_emails":"","payable_with":"credit_card","overpaid_cents":null,"ignore_due_email":null,"ignore_canceled_email":null,"advance_fee_cents":582,"commission_cents":0,"early_payment_discount":false,"secure_id":"39be85e9-8f53-43df-b354-1780e09b09fd-a50a","secure_url":"http://faturas.iugu.dev/39be85e9-8f53-43df-b354-1780e09b09fd-a50a","customer_id":null,"customer_ref":null,"customer_name":null,"user_id":null,"total":"R$
+        250,00","taxes_paid":"R$ 11,55","total_paid":"R$ 250,00","total_overpaid":"R$
+        0,00","commission":"R$ 0,00","fines_on_occurrence_day":"R$ 0,00","total_on_occurrence_day":"R$
+        250,00","fines_on_occurrence_day_cents":0,"total_on_occurrence_day_cents":25000,"financial_return_date":null,"advance_fee":"5.82
+        BRL","paid":"R$ 250,00","interest":null,"discount":null,"created_at":"21/11,
+        10:52 h","refundable":null,"installments":"1","transaction_number":32888161,"payment_method":"iugu_credit_card","created_at_iso":"2017-11-21T10:52:33-02:00","updated_at_iso":"2017-11-23T17:19:08-02:00","occurrence_date":null,"financial_return_dates":[{"id":2,"installment":1,"return_date":"2017-12-23","status":"done","amount":"R$
+        238,45","taxes":"R$ 11,55","executed_date":"23/11, 17:21 h","advanced":true}],"bank_slip":null,"items":[{"id":"67532AFE55584664AFBF4F414EB3C554","description":"teste","price_cents":5000,"quantity":5,"created_at":"2017-11-21T10:52:33-02:00","updated_at":"2017-11-21T10:52:33-02:00","price":"R$
+        50,00"}],"early_payment_discounts":[],"variables":[{"id":"8CAAAF0434A14F11B936F7575534D564","variable":"hl","value":"en"},{"id":"EBDE2ABC927A4050B344A9EB9D886BE3","variable":"last_dunning_day","value":"2"},{"id":"2E14F08269E044C2A6002A88A4655681","variable":"payment_data.arp","value":"00000"},{"id":"2A43989F6A0F413FB1F2D060690E09DB","variable":"payment_data.display_number","value":"XXXX-XXXX-XXXX-1111"},{"id":"B8377478A1C649C59DFF7479863BEB26","variable":"payment_data.holder_name","value":"teste
+        teste"},{"id":"D4E534958BDA448E96FD87CF36164DC7","variable":"payment_data.installments","value":"1"},{"id":"536E123C944343018427EBFBA0756C00","variable":"payment_data.nsu","value":"00000"},{"id":"194ACC50EA934E9B83F862A41ABAD499","variable":"payment_data.transaction_id","value":"00000000000000000001"},{"id":"BA6A052125204BC29891B17F8A3F09C2","variable":"payment_data.transaction_number","value":"32888161"},{"id":"E0088168573D4DB98490ADBC818702DA","variable":"payment_method","value":"iugu_credit_card"}],"custom_variables":[],"logs":[{"id":"5356681A392D4579BFE4C1D41F6E5CD2","description":"Receipt
+        email sent!","notes":"Successfully sent receipt to: alepaezseq@gmail.com","created_at":"23/11,
+        17:19 h"},{"id":"772949D02C0C48619D9FE8C4DB2B572A","description":"Invoice
+        viewed!","notes":"Invoice viewed!  ","created_at":"23/11, 17:19 h"},{"id":"498218D5752149EC8F528D73158C739D","description":"Invoice
+        successfully paid!","notes":"Invoice paid using credit card by:  teste teste,
+        VISA, XXXXXXXXXXXX1111, LR: 00","created_at":"23/11, 17:19 h"},{"id":"3FE2CE4919D548DEB2373AE827019572","description":"Invoice
+        viewed!","notes":"Invoice viewed!  ","created_at":"23/11, 17:18 h"},{"id":"DC58A05F663049FFBD7404F83F6AF8BE","description":"Due
+        email sent!","notes":"Successfully sent due to: alepaezseq@gmail.com","created_at":"21/11,
+        10:52 h"}]}]}'
+    http_version: 
+  recorded_at: Fri, 01 Dec 2017 01:47:52 GMT
+recorded_with: VCR 3.0.3
