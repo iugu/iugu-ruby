@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/invoices
+    body:
+      encoding: UTF-8
+      string: '{"email":"homer@simpsom.com","due_date":"2017-11-30","items":[{"price_cents":100,"description":"Rosquinha","quantity":99}],"payable_with":"credit_card"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '152'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.1
+      Date:
+      - Fri, 01 Dec 2017 01:47:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/invoice#create
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"d92a97d268aee1cc94677aa6864d0ab9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6b92097cf0e7a9a1bee2b9eb56fe195c
+      X-Runtime:
+      - '2.071946'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"3F14349B01264947A3765A79B1DEA1B4","due_date":"2017-11-30","currency":"BRL","discount_cents":null,"email":"homer@simpsom.com","items_total_cents":9900,"notification_url":null,"return_url":null,"status":"pending","tax_cents":null,"updated_at":"2017-11-30T23:47:51-02:00","total_cents":9900,"total_paid_cents":0,"paid_at":null,"taxes_paid_cents":null,"paid_cents":null,"cc_emails":null,"financial_return_date":null,"payable_with":"credit_card","overpaid_cents":null,"ignore_due_email":null,"ignore_canceled_email":null,"advance_fee_cents":null,"commission_cents":null,"early_payment_discount":false,"secure_id":"3f14349b-0126-4947-a376-5a79b1dea1b4-4f17","secure_url":"http://faturas.iugu.dev/3f14349b-0126-4947-a376-5a79b1dea1b4-4f17","customer_id":null,"customer_ref":null,"customer_name":null,"user_id":null,"total":"R$
+        99,00","taxes_paid":"R$ 0,00","total_paid":"R$ 0,00","total_overpaid":"R$
+        0,00","commission":"R$ 0,00","fines_on_occurrence_day":null,"total_on_occurrence_day":null,"fines_on_occurrence_day_cents":null,"total_on_occurrence_day_cents":null,"advance_fee":null,"paid":"R$
+        0,00","interest":null,"discount":null,"created_at":"30/11, 23:47 h","refundable":null,"installments":null,"transaction_number":8846865,"payment_method":null,"created_at_iso":"2017-11-30T23:47:51-02:00","updated_at_iso":"2017-11-30T23:47:51-02:00","occurrence_date":null,"financial_return_dates":null,"bank_slip":null,"items":[{"id":"C24EA78C4F83497180C086313E15B036","description":"Rosquinha","price_cents":100,"quantity":99,"created_at":"2017-11-30T23:47:51-02:00","updated_at":"2017-11-30T23:47:51-02:00","price":"R$
+        1,00"}],"early_payment_discounts":[],"variables":[{"id":"33D18579B484474486C98EAAF369825A","variable":"payment_data.transaction_number","value":"8846865"}],"custom_variables":[],"logs":[{"id":"2C0EFCD8784F4242A0D43D2B0F8D346A","description":"Email
+        de Fatura enviado!","notes":"Fatura enviada com sucesso para: homer@simpsom.com","created_at":"30/11,
+        23:47 h"}]}'
+    http_version: 
+  recorded_at: Fri, 01 Dec 2017 01:47:51 GMT
+recorded_with: VCR 3.0.3
