@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/charge
+    body:
+      encoding: UTF-8
+      string: '{"method":"bank_slip","payer":{"name":"Awesome Customer","cpf_cnpj":"15111975000164","address":{"zip_code":"29190560","number":"100"}},"items":[[{"quantity":1,"price_cents":5000,"description":"item
+        1"}]],"currency":"BRL","email":"example@example.example"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '255'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Tue, 26 Dec 2017 20:20:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/charge#charge
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"e29e57ddef2b25d8fde759405d737d75"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b72cad8e7354ce24199e7a3ac0749640
+      X-Runtime:
+      - '0.376913'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"url":"http://faturas.iugu.dev/f0aea0c7-156d-40ac-91ea-3c6a6ff533eb-35c3?bs=true","pdf":"http://faturas.iugu.dev/f0aea0c7-156d-40ac-91ea-3c6a6ff533eb-35c3.pdf","identification":"23793.38128
+        50000.005202 73000.050804 8 73880000005000","invoice_id":"F0AEA0C7156D40AC91EA3C6A6FF533EB"}'
+    http_version: 
+  recorded_at: Tue, 26 Dec 2017 20:20:42 GMT
+recorded_with: VCR 3.0.3
