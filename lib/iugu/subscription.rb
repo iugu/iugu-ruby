@@ -6,7 +6,10 @@ module Iugu
     include Iugu::APIDelete
 
     def add_credits(quantity)
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("PUT", "#{self.class.url(self.id)}/add_credits", { quantity: quantity }))
+      copy Iugu::Factory.create_from_response(self.class.object_type,
+                                              APIRequest.request('PUT',
+                                                                 "#{self.class.url(self.id)}/add_credits",
+                                                                 { quantity: quantity }))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
@@ -15,7 +18,10 @@ module Iugu
     end
 
     def remove_credits(quantity)
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("PUT", "#{self.class.url(self.id)}/remove_credits", { quantity: quantity }))
+      copy Iugu::Factory.create_from_response(self.class.object_type,
+                                              APIRequest.request('PUT',
+                                                                 "#{self.class.url(self.id)}/remove_credits",
+                                                                 { quantity: quantity }))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
@@ -24,7 +30,9 @@ module Iugu
     end
 
     def suspend
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/suspend"))
+      copy Iugu::Factory.create_from_response(self.class.object_type,
+                                              APIRequest.request('POST',
+                                                                 "#{self.class.url(self.id)}/suspend"))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
@@ -33,7 +41,9 @@ module Iugu
     end
 
     def activate
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/activate"))
+      copy Iugu::Factory.create_from_response(self.class.object_type,
+                                              APIRequest.request('POST',
+                                                                 "#{self.class.url(self.id)}/activate"))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
@@ -43,7 +53,10 @@ module Iugu
 
     def change_plan(plan_identifier, options = {})
       options.merge!({ plan_identifier: plan_identifier })
-      copy Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("POST", "#{self.class.url(self.id)}/change_plan", options))
+      copy Iugu::Factory.create_from_response(self.class.object_type,
+                                              APIRequest.request('POST',
+                                                                 "#{self.class.url(self.id)}/change_plan",
+                                                                 options))
       self.errors = nil
       true
     rescue Iugu::RequestWithErrors => ex
@@ -53,7 +66,10 @@ module Iugu
 
     def change_plan_simulation(plan_identifier, options = {})
       options.merge!({ plan_identifier: plan_identifier })
-      Iugu::Factory.create_from_response(self.class.object_type, APIRequest.request("GET", "#{self.class.url(self.id)}/change_plan_simulation", options))
+      Iugu::Factory.create_from_response(self.class.object_type,
+                                         APIRequest.request('GET',
+                                                            "#{self.class.url(self.id)}/change_plan_simulation",
+                                                            options))
     end
 
     def customer

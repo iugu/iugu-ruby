@@ -1,0 +1,212 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/subscriptions/1CBD18FA1E4B47C891EFD82EF4321BC4
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 03 Jan 2018 19:08:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"7a5d8281d0c654979d598ec2a16d318a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0bf6b574234e24cce9aa33c5a84363ff
+      X-Runtime:
+      - '0.201656'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"1CBD18FA1E4B47C891EFD82EF4321BC4","suspended":false,"plan_identifier":"basic","price_cents":5000,"currency":"BRL","features":{"search":{"name":"Search","value":10}},"expires_at":null,"created_at":"2018-01-02T15:31:05-02:00","updated_at":"2018-01-02T15:31:05-02:00","customer_name":"Lucas
+        Oliveira","customer_email":"lucas.oliveira+customer@iugu.com","cycled_at":null,"credits_min":0,"credits_cycle":null,"payable_with":"all","ignore_due_email":null,"customer_id":"524AB141252E44D3B2D006D8845DB261","plan_name":"Basic","customer_ref":"Lucas
+        Oliveira","plan_ref":"Basic","active":true,"in_trial":null,"credits":0,"credits_based":false,"recent_invoices":[{"id":"A70B2BF20EA841C0AF02C132CABD78AA","due_date":"2018-01-02","status":"pending","total":"R$
+        150,00","secure_url":"http://faturas.iugu.dev/a70b2bf2-0ea8-41c0-af02-c132cabd78aa-23fa"}],"subitems":[{"id":"3BABEA668F2542C7AD425B5C4149C2AE","description":"Rare
+        Candy","quantity":1,"price_cents":10000,"recurrent":false,"price":"R$ 100,00","total":"R$
+        100,00"}],"logs":[{"id":"15B80A6880C5404F9180042270BA900F","description":"Assinatura
+        Criada","notes":"Assinatura Criada ","created_at":"2018-01-02T15:31:05-02:00"},{"id":"D0FE2B67670F490E9FDA902145678544","description":"Fatura
+        criada","notes":"Fatura criada com os items:  1x Rare Candy = 100.00 BRL;1x
+        Subscription Activation: Basic = 50.00 BRL;","created_at":"2018-01-02T15:31:05-02:00"}],"custom_variables":[{"name":"a","value":"b"}]}'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 19:08:16 GMT
+- request:
+    method: put
+    uri: http://api.iugu.dev/v1/subscriptions/1CBD18FA1E4B47C891EFD82EF4321BC4
+    body:
+      encoding: UTF-8
+      string: '{"plan_identifier":"medium"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '28'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 03 Jan 2018 19:08:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#update
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"4cbdcc77e22496fa8ec3da997a154a6d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6b30ac2c535bd4fe48b2ecda95daeac8
+      X-Runtime:
+      - '1.106939'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"1CBD18FA1E4B47C891EFD82EF4321BC4","suspended":false,"plan_identifier":"medium","price_cents":10000,"currency":"BRL","features":{},"expires_at":null,"created_at":"2018-01-02T15:31:05-02:00","updated_at":"2018-01-03T17:08:16-02:00","customer_name":"Lucas
+        Oliveira","customer_email":"lucas.oliveira+customer@iugu.com","cycled_at":null,"credits_min":0,"credits_cycle":null,"payable_with":"all","ignore_due_email":null,"customer_id":"524AB141252E44D3B2D006D8845DB261","plan_name":"Medium","customer_ref":"Lucas
+        Oliveira","plan_ref":"Medium","active":true,"in_trial":null,"credits":0,"credits_based":false,"recent_invoices":[{"id":"BC95FF4804874CFF960790832F101F0A","due_date":"2018-01-03","status":"pending","total":"R$
+        100,00","secure_url":"http://faturas.iugu.dev/bc95ff48-0487-4cff-9607-90832f101f0a-6fac"},{"id":"A70B2BF20EA841C0AF02C132CABD78AA","due_date":"2018-01-02","status":"canceled","total":"R$
+        150,00","secure_url":"http://faturas.iugu.dev/a70b2bf2-0ea8-41c0-af02-c132cabd78aa-23fa"}],"subitems":[{"id":"3BABEA668F2542C7AD425B5C4149C2AE","description":"Rare
+        Candy","quantity":1,"price_cents":10000,"recurrent":false,"price":"R$ 100,00","total":"R$
+        100,00"}],"logs":[{"id":"C15632DC3F01452AA76BA494772932C4","description":"Fatura
+        criada","notes":"Fatura criada com os items:  1x Mudan\u00e7a de Plano: Medium
+        = R$ 100,00;","created_at":"2018-01-03T17:08:17-02:00"},{"id":"3D809D28BDAE4C479B3DB30F82839AF5","description":"Assinatura
+        Modificada","notes":"Assinatura Modificada ","created_at":"2018-01-03T17:08:16-02:00"},{"id":"15B80A6880C5404F9180042270BA900F","description":"Assinatura
+        Criada","notes":"Assinatura Criada ","created_at":"2018-01-02T15:31:05-02:00"},{"id":"D0FE2B67670F490E9FDA902145678544","description":"Fatura
+        criada","notes":"Fatura criada com os items:  1x Rare Candy = 100.00 BRL;1x
+        Subscription Activation: Basic = 50.00 BRL;","created_at":"2018-01-02T15:31:05-02:00"}],"custom_variables":[{"name":"a","value":"b"}]}'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 19:08:17 GMT
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/subscriptions/1CBD18FA1E4B47C891EFD82EF4321BC4
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 03 Jan 2018 19:08:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"4cbdcc77e22496fa8ec3da997a154a6d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 86a560f27356bc1b85e69b95ee020ecf
+      X-Runtime:
+      - '0.140556'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"1CBD18FA1E4B47C891EFD82EF4321BC4","suspended":false,"plan_identifier":"medium","price_cents":10000,"currency":"BRL","features":{},"expires_at":null,"created_at":"2018-01-02T15:31:05-02:00","updated_at":"2018-01-03T17:08:16-02:00","customer_name":"Lucas
+        Oliveira","customer_email":"lucas.oliveira+customer@iugu.com","cycled_at":null,"credits_min":0,"credits_cycle":null,"payable_with":"all","ignore_due_email":null,"customer_id":"524AB141252E44D3B2D006D8845DB261","plan_name":"Medium","customer_ref":"Lucas
+        Oliveira","plan_ref":"Medium","active":true,"in_trial":null,"credits":0,"credits_based":false,"recent_invoices":[{"id":"BC95FF4804874CFF960790832F101F0A","due_date":"2018-01-03","status":"pending","total":"R$
+        100,00","secure_url":"http://faturas.iugu.dev/bc95ff48-0487-4cff-9607-90832f101f0a-6fac"},{"id":"A70B2BF20EA841C0AF02C132CABD78AA","due_date":"2018-01-02","status":"canceled","total":"R$
+        150,00","secure_url":"http://faturas.iugu.dev/a70b2bf2-0ea8-41c0-af02-c132cabd78aa-23fa"}],"subitems":[{"id":"3BABEA668F2542C7AD425B5C4149C2AE","description":"Rare
+        Candy","quantity":1,"price_cents":10000,"recurrent":false,"price":"R$ 100,00","total":"R$
+        100,00"}],"logs":[{"id":"C15632DC3F01452AA76BA494772932C4","description":"Fatura
+        criada","notes":"Fatura criada com os items:  1x Mudan\u00e7a de Plano: Medium
+        = R$ 100,00;","created_at":"2018-01-03T17:08:17-02:00"},{"id":"3D809D28BDAE4C479B3DB30F82839AF5","description":"Assinatura
+        Modificada","notes":"Assinatura Modificada ","created_at":"2018-01-03T17:08:16-02:00"},{"id":"15B80A6880C5404F9180042270BA900F","description":"Assinatura
+        Criada","notes":"Assinatura Criada ","created_at":"2018-01-02T15:31:05-02:00"},{"id":"D0FE2B67670F490E9FDA902145678544","description":"Fatura
+        criada","notes":"Fatura criada com os items:  1x Rare Candy = 100.00 BRL;1x
+        Subscription Activation: Basic = 50.00 BRL;","created_at":"2018-01-02T15:31:05-02:00"}],"custom_variables":[{"name":"a","value":"b"}]}'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 19:08:17 GMT
+recorded_with: VCR 3.0.3
