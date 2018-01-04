@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/subscriptions
+    body:
+      encoding: UTF-8
+      string: '{"plan_identifier":"basic","customer_id":"8941A38AB8BF4BBAA595C0E03F379C9C","expires_at":"2018-01-04"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '102'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 04 Jan 2018 18:34:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#create
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"cbb0036bc6768ba0884b7596e295e489"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5134bac92a6cc66f37218451e1896106
+      X-Runtime:
+      - '0.410656'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"CB724A81F8014ED98B89E37B7E2FA8AC","suspended":false,"plan_identifier":"basic","price_cents":5000,"currency":"BRL","features":{},"expires_at":"2018-01-04","created_at":"2018-01-04T16:34:16-02:00","updated_at":"2018-01-04T16:34:16-02:00","customer_name":"Example","customer_email":"example@iugu.com","cycled_at":null,"credits_min":0,"credits_cycle":null,"payable_with":"credit_card","ignore_due_email":null,"customer_id":"8941A38AB8BF4BBAA595C0E03F379C9C","plan_name":"Basic","customer_ref":"Example","plan_ref":"Basic","active":true,"in_trial":null,"credits":0,"credits_based":false,"recent_invoices":[{"id":"2E238756D26F4DF8954D818C381DB914","due_date":"2018-01-04","status":"pending","total":"R$
+        50,00","secure_url":"http://faturas.iugu.dev/2e238756-d26f-4df8-954d-818c381db914-fcad"}],"subitems":[],"logs":[{"id":"2D3247A47063481FB92C2A665B786478","description":"Assinatura
+        Criada","notes":"Assinatura Criada ","created_at":"2018-01-04T16:34:16-02:00"},{"id":"8731347006F14EADB622EDAB263A0664","description":"Fatura
+        criada","notes":"Fatura criada com os items:  1x Ativa\u00e7\u00e3o de Assinatura:
+        Basic = R$ 50,00;","created_at":"2018-01-04T16:34:16-02:00"}],"custom_variables":[]}'
+    http_version: 
+  recorded_at: Thu, 04 Jan 2018 18:34:16 GMT
+recorded_with: VCR 3.0.3

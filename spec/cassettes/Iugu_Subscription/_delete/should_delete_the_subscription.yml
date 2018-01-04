@@ -1,0 +1,184 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/subscriptions/C09161223BE1467E9DC4F4DFCC5687DC
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 03 Jan 2018 19:03:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"61d6de7eeb8118a0f1c5419e50f1a972"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 01ea3df0d197736f948b8ecd4e66d15b
+      X-Runtime:
+      - '2.151488'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"C09161223BE1467E9DC4F4DFCC5687DC","suspended":false,"plan_identifier":"basic","price_cents":5000,"currency":"BRL","features":{"search":{"name":"Search","value":10}},"expires_at":"2018-08-08","created_at":"2018-01-03T16:55:05-02:00","updated_at":"2018-01-03T16:55:05-02:00","customer_name":"Lucas
+        Oliveira","customer_email":"lucas.oliveira+customer@iugu.com","cycled_at":null,"credits_min":0,"credits_cycle":null,"payable_with":"all","ignore_due_email":null,"customer_id":"524AB141252E44D3B2D006D8845DB261","plan_name":"Basic","customer_ref":"Lucas
+        Oliveira","plan_ref":"Basic","active":true,"in_trial":null,"credits":0,"credits_based":false,"recent_invoices":[],"subitems":[],"logs":[{"id":"C26040EFFDDD4FB69523609141D7497F","description":"Assinatura
+        Criada","notes":"Assinatura Criada ","created_at":"2018-01-03T16:55:05-02:00"}],"custom_variables":[]}'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 19:03:59 GMT
+- request:
+    method: delete
+    uri: http://api.iugu.dev/v1/subscriptions/C09161223BE1467E9DC4F4DFCC5687DC
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 03 Jan 2018 19:03:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#destroy
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"c03d75fb563f632c1010e7abb3af7644"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 179563ed118e8bd2d3377e9adbb36a95
+      X-Runtime:
+      - '0.092850'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"C09161223BE1467E9DC4F4DFCC5687DC","suspended":false,"plan_identifier":"basic","price_cents":5000,"currency":"BRL","features":{"search":{"name":"Search","value":10}},"expires_at":"2018-08-08","created_at":"2018-01-03T16:55:05-02:00","updated_at":"2018-01-03T16:55:05-02:00","customer_name":"Lucas
+        Oliveira","customer_email":"lucas.oliveira+customer@iugu.com","cycled_at":null,"credits_min":0,"credits_cycle":null,"payable_with":"all","ignore_due_email":null,"customer_id":"524AB141252E44D3B2D006D8845DB261","plan_name":"Basic","customer_ref":"Lucas
+        Oliveira","plan_ref":"Basic","active":true,"in_trial":null,"credits":0,"credits_based":false,"recent_invoices":null,"subitems":[],"logs":[{"id":"C26040EFFDDD4FB69523609141D7497F","description":"Assinatura
+        Criada","notes":"Assinatura Criada ","created_at":"2018-01-03T16:55:05-02:00"}],"custom_variables":[]}'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 19:03:59 GMT
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/subscriptions/C09161223BE1467E9DC4F4DFCC5687DC
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 03 Jan 2018 19:04:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/subscription#show
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3a31d08571296e53e506ebbc299f752c
+      X-Runtime:
+      - '1.347013'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Subscription Not Found"}'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 19:04:00 GMT
+recorded_with: VCR 3.0.3
