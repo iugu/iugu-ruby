@@ -11,6 +11,23 @@ describe Iugu::Subscription do
       expect(subscription.is_new?).to be_falsy
       expect(subscription.id).to_not be_nil
     end
+
+    it 'should create a subscription and an invoice when it is about to expire', :vcr do
+      subscription = Iugu::Subscription.create(plan_identifier: 'basic',
+                                               customer_id: '8941A38AB8BF4BBAA595C0E03F379C9C',
+                                               expires_at: Date.new(2018, 1, 4))
+
+      expect(subscription.recent_invoices.size).to eq(1)
+    end
+
+    it 'should create a subscription but not an invoice when it will expire 5 five days from now', :vcr do
+      subscription = Iugu::Subscription.create(plan_identifier: 'basic',
+                                               payable_with: 'credit_card',
+                                               customer_id: '8941A38AB8BF4BBAA595C0E03F379C9C',
+                                               expires_at: Date.new(2018, 1, 10))
+
+      expect(subscription.recent_invoices.size).to eq(0)
+    end
   end
 
   describe '.fetch' do
