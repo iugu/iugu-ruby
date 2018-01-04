@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/payment_token
+    body:
+      encoding: UTF-8
+      string: '{"account_id":"","method":"credit_card","test":"true","data":{"number":"4111111111111111","verification_value":"123","first_name":"Walter","last_name":"White","month":"02","year":"2020"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '187'
+      Host:
+      - api.iugu.dev
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Thu, 04 Jan 2018 16:26:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Handledby:
+      - api/v1/payment_token#create
+      Cache-Control:
+      - no-cache, no-store
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Request-Id:
+      - b00b0bf9310de3ef26d114c3c2d10421
+      X-Runtime:
+      - '1.632447'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"2FE3DC4627AC4C3588239F6C9C0C283F","method":"credit_card","extra_info":{"brand":"VISA","holder_name":"Walter
+        White","display_number":"XXXX-XXXX-XXXX-1111","bin":"411111","month":2,"year":2020},"test":false}'
+    http_version: 
+  recorded_at: Thu, 04 Jan 2018 16:26:35 GMT
+recorded_with: VCR 3.0.3

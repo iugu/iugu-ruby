@@ -3,7 +3,7 @@ module Iugu
     include Iugu::APICreate
 
     def success
-      @attributes["success"] || false
+      @attributes['success'] || false
     end
 
     def invoice
