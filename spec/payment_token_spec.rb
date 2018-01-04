@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Iugu::PaymentToken do
   describe '.create' do
     it 'should create a payment token', :vcr do
-      token = Iugu::PaymentToken.create(account_id: '',
+      token = Iugu::PaymentToken.create(account_id: '842C5942D8E34372A8E554A1BC959086',
                                         method: 'credit_card',
                                         test: 'true',
                                         data: {
