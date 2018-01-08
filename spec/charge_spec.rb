@@ -52,5 +52,36 @@ describe Iugu::Charge do
       expect(charge.LR).to eq('00')
     end
 
+    it 'should create a charge with credit card with installments', :vcr do
+      token = Iugu::PaymentToken.create(account_id: 'F17761200EC74469823D469BF2B211AC',
+                                        method: 'credit_card',
+                                        test: 'true',
+                                        data: {
+                                          number: '4111111111111111',
+                                          verification_value: '123',
+                                          first_name: 'Walter',
+                                          last_name: 'White',
+                                          month: '02',
+                                          year: '2020'
+                                        })
+
+
+      charge = Iugu::Charge.create(token: token.id,
+                                   payer: { name: 'Awesome Customer',
+                                            cpf_cnpj: '15111975000164',
+                                            address: { zip_code: '29190560', number: '100'} },
+                                   items: [[{ quantity: 1,
+                                              price_cents: 5000,
+                                              description: 'item 1' }]],
+                                   currency: 'BRL',
+                                   months: 3, # 3 installments
+                                   email: 'example@example.example')
+
+      invoice = Iugu::Invoice.fetch(id: charge.invoice_id)
+
+      expect(charge.success).to be_truthy
+      expect(invoice.status).to eq('paid')
+      expect(invoice.installments).to eq('3')
+    end
   end
 end
