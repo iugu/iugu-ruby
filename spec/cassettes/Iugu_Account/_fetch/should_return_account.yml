@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/accounts/81EB28B1B2084E59AA34660789350CF7
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Mar 2018 16:50:24 GMT
+      Etag:
+      - '"de2f085abb4ca5c82530bc76921a7ac6"'
+      Vary:
+      - Origin
+      X-Handledby:
+      - api/v1/account#show
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 826a6d750102b86918c046b1a011ef7e
+      X-Runtime:
+      - '0.494016'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - incap_ses_789_1185448=2k8kekRxcUfMFOJenBfzCk/qr1oAAAAAmSXlTJV52qXExtrULNgj8w==;
+        path=/; Domain=.iugu.com
+      - nlbi_1185448=2R19bzjN/QP3cJOgxHKSPgAAAABnoVHi5OV1jYWlzHvLNzqW; path=/; Domain=.iugu.com
+      - visid_incap_1185448=z5hCyrqlSNic5f2mmqiy2E/qr1oAAAAAQUIPAAAAAADQAl1hXbx6YKf9dJxtwVha;
+        expires=Tue, 19 Mar 2019 13:45:18 GMT; path=/; Domain=.iugu.com
+      X-Iinfo:
+      - 3-15251323-15251348 NNNN CT(6 6 0) RT(1521478222263 291) q(0 0 0 -1) r(11
+        11) U5
+      X-Cdn:
+      - Incapsula
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAA/8VVyW7bMBD9lYDo0QlkO05sXdqkSA89tr0FBTGWRjZhilS52DEC/3uH1GI5kdMcivao2fjmzZvRMxM5S9l8/HA/md+P7yfJ/Pphtri7m17f3CS388V0lnz+cstGTEGJFPlVr9XFd6V3ZMoMgsOcgyPHJBnPL5Pp5XjxYzxNr2fpZEGfaZJQoK/yNwKnSReYgeIGMxRb/MjSAqTFEROWb9GIQmB+NEqwrjFn4IQOeb88ktE6cN6yVHkp34ojSPDnqAIxX0K2aSOzNagV8koSUreviJLxiFm/tJkRVci03BkBkldUTRO3yUv3Ukgp1Ire33coc2FhKZFjCULa0yZ3wq1zA7s21mAl99xpolLpy/j1SfiVv8p0SRTucAlVxakFF/CXOseuXglmg46wZ0dbjgV46ahh543i3siuVYO5cDwDk3cDaH2FUNjj2BEjsC9REWHkaR3EQWiTC+XQEJrWriVpId+CyjDkdFgQDLXWViJSMu1VlzXsPeHxTAjhyPBYCLzTPVqbx9usOAOutOvE8I6QVrXm5I2mxy6/b2zU8zqa66p+tHYtQdY12LcPF8korkljI155ZbSLzA64YUswo64KbXoN90JjehZ2c+gd6jemD/nqhs+6SYylsDZQM+TeaulL5FHgpVZuPeR1a1r9116nHe3XyVLFNavtkDmaw5AbntCSNkR+7tlexJmn10D7C2pDs8pJ0PZ4j0hiTb/02iPTO0Va+Ek8eOt0yaVe6ZPd6pltCVL2ncMqDnWpoFA0zBKavh6f2Qb3hLHHd6t24hGkD7yPZ1cJOwQ0WhVi5U0j6+f/sAoDgn/nJgy0mIbORjXbzfGky1jD2f+dWxXHbaWoIl1RXCx1xodz9eQM8DxSXK9EZUTg5MR+OLmk/SoNlVYXNGWs5aqJNsbCmOk/JmWAefwf9I3UhLU9tN2Jf+KnuRHaS3OcufauVyDGuR3p0WFFPzFQNgDtZn74R/f5cPgNbAF5/5UIAAA=
+    http_version:
+  recorded_at: Mon, 19 Mar 2018 16:50:24 GMT
+recorded_with: VCR 4.0.0

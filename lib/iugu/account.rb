@@ -123,16 +123,18 @@ module Iugu
     # Transfers an amount to another account
     #
     # @param [Hash] attributes the values to make a transfer of an account
-    # @param [String] account_id the account_id of account with will receive
-    # @param [String] amount_cents the value in cents that will be transferred
+    # @option attributes[receiver_id] [String] receiver_id the account_id of account with will receive
+    # @option attributes[amount_cents] [String] amount_cents the value in cents that will be transferred
+    # @param [String] api_token live_api_token of the account sending the money
 
-    def self.transfer(attributes)
+    def self.transfer(attributes, api_token)
       Iugu::Factory.create_from_response(
         object_type,
         APIRequest.request(
           "POST",
           "#{Iugu.base_uri}transfers",
-          attributes
+          attributes,
+          api_token
         )
       )
     end
@@ -169,7 +171,7 @@ module Iugu
     # @option attributes [String] :account_type The type of account
     # @option attributes [Integer] :bank The number of the bank account
     # @option attributes [file] :document Documento for comprove the data of bank account
-
+    # @param [String] user_token of the account
 
     def self.bank(attributes, user_token)
       Iugu::Factory.create_from_response(
@@ -178,6 +180,24 @@ module Iugu
           "POST",
           "#{Iugu.base_uri}bank_verification",
           attributes,
+          user_token
+        )
+      )
+    end
+
+    # GET /bank_verification
+    #
+    # List bank accounts
+    #
+    # @param [String] user_token of the account
+
+    def self.banks(user_token)
+      Iugu::Factory.create_from_response(
+        object_type,
+        APIRequest.request(
+          "GET",
+          "#{Iugu.base_uri}bank_verification",
+          {},
           user_token
         )
       )

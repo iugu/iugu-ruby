@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/marketplace/create_account
+    body:
+      encoding: UTF-8
+      string: '{"name":"John Snow","commission_percent":15}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '44'
+      Host:
+      - api.iugu.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Mar 2018 16:45:30 GMT
+      Etag:
+      - '"2a00d25361deb7032fa83dcae426f5b0"'
+      Vary:
+      - Origin
+      X-Handledby:
+      - api/v1/market_place#create_account
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - d17737dca0f06095e96c4e84f4de2057
+      X-Runtime:
+      - '1.487710'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - incap_ses_789_1185448=inhGPXG0QjpVtOBenBfzCirpr1oAAAAAEj5hUk2xgEwTkqycbDMn+g==;
+        path=/; Domain=.iugu.com
+      - nlbi_1185448=9Mz6Bb/itTIcyQ7KxHKSPgAAAABJbhWb/VgrLMaNVgFvqy3G; path=/; Domain=.iugu.com
+      - visid_incap_1185448=PVqTI1SdREOEsv8sK5vIUSrpr1oAAAAAQUIPAAAAAACBtPetj/f1QwGeWr+5eu19;
+        expires=Tue, 19 Mar 2019 13:45:16 GMT; path=/; Domain=.iugu.com
+      X-Iinfo:
+      - 5-34213879-34213948 NNNN CT(5 4 0) RT(1521477928604 309) q(0 0 0 -1) r(15
+        15) U5
+      X-Cdn:
+      - Incapsula
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAA/1XLMW7DMAyF4asUmjtIIkWR3eIiGbLmAIZMUajRVC4aJxmC3r3uUqDre//3cEV1ufZ1nKt7cRz2Q+QhDNEz7pPsdoBEPrNA8q+H7J5dLx+2lcflrT+d+nLfpvN8s7F8zuO6vFvfTuOJjDl4DDWLr4mbNGRKmhWz6WZWu6z/jADEJIBq4oufStMEUYQiSsBYf831Yl9/fSJIVk24Qc4VJwNopEheIxO37L5/AAAQbp3cAAAA
+    http_version:
+  recorded_at: Mon, 19 Mar 2018 16:45:31 GMT
+recorded_with: VCR 4.0.0

@@ -25,8 +25,8 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
-  # config.before(:each) do
-  #   Iugu.api_key = 'development_api_token'
-  #   allow(Iugu).to receive(:base_uri).and_return('http://api.iugu.dev/v1/')
-  # end
+  config.before(:each) do
+    Iugu.api_key = 'development_api_token'
+    allow(Iugu).to receive(:base_uri).and_return('http://api.iugu.dev/v1/')
+  end
 end

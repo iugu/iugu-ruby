@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iugu.dev/v1/accounts/81EB28B1B2084E59AA34660789350CF7/request_verification
+    body:
+      encoding: UTF-8
+      string: '{"data":{"physical_products":"false","price_range":"Mais que R$ 500,00","business_type":"Adestramento
+        de Animais de Estimação","person_type":"Pessoa Física","automatic_transfer":"false","cpf":"33502306877","name":"Nelson
+        Minor Haraguchi Junior","address":"Rua Professor Rubião Meira, 101","cep":"05409-020","city":"São
+        Paulo","state":"São Paulo","telephone":"11 35718138","bank":"Itaú","bank_ag":"3129","account_type":"Corrente","bank_cc":"23220-7"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '457'
+      Host:
+      - api.iugu.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Mar 2018 17:05:39 GMT
+      Etag:
+      - '"12e339315d2f295bb675b71dac4e2cd8"'
+      Vary:
+      - Origin
+      X-Handledby:
+      - api/v1/account#request_verification
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 8a620870c48f9e3633a588b8d4718c2a
+      X-Runtime:
+      - '0.127589'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - incap_ses_789_1185448=6HKRU7A5lDnCwuVenBfzCuPtr1oAAAAAyL7L/XpwceUmIrCMnRVBYA==;
+        path=/; Domain=.iugu.com
+      - nlbi_1185448=YoCIO+XjIxt7iK4xxHKSPgAAAACIepKxHr80tGZng0voe+OG; path=/; Domain=.iugu.com
+      - visid_incap_1185448=xuwlQ0SYQZWgZEkyFnmVW+Ptr1oAAAAAQUIPAAAAAAALFRg3EQNt2s+Avaepvpw4;
+        expires=Tue, 19 Mar 2019 13:44:52 GMT; path=/; Domain=.iugu.com
+      X-Iinfo:
+      - 14-127222830-127222869 NNNN CT(8 5 0) RT(1521479139018 181) q(0 0 1 -1) r(2
+        2) U5
+      X-Cdn:
+      - Incapsula
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAA/21STYvbMBD9K8L0mIBk2ZHtm+04bAspIe2xYGZlORF1JK8+DmHZ/95R2NAeehHSm6f3Zh7znukpa7K62Akm+rzf70WxP+y7fsirritEWx2GvhXZJpsgQNa8Z6vTUo0OzEXhxyNoT96iIucvpKR0QylS1+vdawnLuDo7RRk8EmdYvMLaa/TaKO/HcF+TQDspHxzclAmWTIq0Rt+SJl4HH/D+K1KqxOPkNokr5615fj+hlAVyeNSn5IoUiMHeIGg5orLxs3L/NCDXGV+clzTndFeJNJtBfwS/qwWlyVEb68gLOLhEedXkWzTauqQ7TQ79kHmOQE7OzsndkXN81Z8NkqPSDjaEUZa81IpkWha03tI8RSN1uCP040k/QVzSVD5AUP8rBLWo9WpNKjJGeClYxXiVkgTzG8Gv4RHRDJ/QCJc0H8vr1LGUNprwTKu3zmHQ6kmVEsGc5zndiuzjL/2xExUbOlwC1uW0Koayblte7HZUVDVm1x9SbtIpbHsaISQdyqot5VtW/2RFQ8uG49C8wY34+ANmqlnsZgIAAA==
+    http_version:
+  recorded_at: Mon, 19 Mar 2018 17:05:39 GMT
+recorded_with: VCR 4.0.0

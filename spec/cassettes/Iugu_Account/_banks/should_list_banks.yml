@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.iugu.dev/v1/bank_verification
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Iugu RubyLibrary
+      Authorization:
+      - Basic ZGV2ZWxvcG1lbnRfYXBpX3Rva2VuOg==
+      Accept-Charset:
+      - utf-8
+      Accept-Language:
+      - pt-br;q=0.9,pt-BR
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Host:
+      - api.iugu.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Mar 2018 18:44:09 GMT
+      Etag:
+      - '"f8e4df4ee9111fbb2307010fe7c76ba7"'
+      Vary:
+      - Origin
+      X-Handledby:
+      - api/v1/bank_verification_request#index
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 336c1c6827e694d0e25aefcf4f64d72f
+      X-Runtime:
+      - '0.048248'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - incap_ses_789_1185448=Sdw4eRVyKXh6avxenBfzCvkEsFoAAAAACfZAC9Ze+BDF6aYW4whi2g==;
+        path=/; Domain=.iugu.com
+      - nlbi_1185448=41bFRO/nGxg/Ey5zxHKSPgAAAABEpdIuDFeLM889zlUTIITx; path=/; Domain=.iugu.com
+      - visid_incap_1185448=vybYFs2hQ/SFCz9aiEfsvvkEsFoAAAAAQUIPAAAAAACLDAh0t9iKooiMT4YjH6nE;
+        expires=Tue, 19 Mar 2019 13:45:17 GMT; path=/; Domain=.iugu.com
+      X-Iinfo:
+      - 10-54608241-54608249 NNNN CT(5 8 0) RT(1521485049275 40) q(0 0 0 -1) r(0 0)
+        U5
+      X-Cdn:
+      - Incapsula
+      Content-Encoding:
+      - gzip
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAA/32MQQ6CMBBF7zJrSKZAactOIp7AnTGmtKMxkpZAuzDGuzssdOlm8v7Ly5xecPfQQdsqrCuDtdGyaYZ+dzB6UHpvkHHoJRSwJpvyyq11juZEnp1byDJdbGJfodAl1qUwRyG72nSIPPlymGf/JxTVL+TnMYetwsq0UqhSb/ZGwT03iUaWik2cabHpHgN0IU9TAVciP1r3+O7RBmboF+tpdRHe5w+Vd1t37AAAAA==
+    http_version:
+  recorded_at: Mon, 19 Mar 2018 18:44:09 GMT
+recorded_with: VCR 4.0.0
