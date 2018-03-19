@@ -10,7 +10,6 @@ module Iugu
     # @option attributes [Integer] :commission_percent The commission_percent
     #   of an account
 
-
     def self.create(attributes)
       Iugu::Factory.create_from_response(
         object_type,
@@ -73,7 +72,6 @@ module Iugu
     # @param [String] account_id the account_id of an account
     # @param [String] user_token the user_token of an account
 
-
     def self.verify(attributes, account_id, user_token)
       Iugu::Factory.create_from_response(
         object_type,
@@ -93,7 +91,7 @@ module Iugu
     # @param [String] account_id the account_id of an account
     # @param [String] user_token the user_token of an account
 
-    def self.search(account_id, user_token)
+    def self.fetch(account_id, user_token)
       Iugu::Factory.create_from_response(
         object_type,
         APIRequest.request(
@@ -138,8 +136,6 @@ module Iugu
         )
       )
     end
-
-
 
     # POST /accounts/:account_id/request_withdraw
     #
@@ -186,8 +182,5 @@ module Iugu
         )
       )
     end
-
-
-
   end
 end

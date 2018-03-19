@@ -12,6 +12,9 @@ VCR.configure do |config|
 end
 
 RSpec.configure do |config|
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -22,8 +25,8 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
-  config.before(:each) do
-    Iugu.api_key = 'development_api_token'
-    allow(Iugu).to receive(:base_uri).and_return('http://api.iugu.dev/v1/')
-  end
+  # config.before(:each) do
+  #   Iugu.api_key = 'development_api_token'
+  #   allow(Iugu).to receive(:base_uri).and_return('http://api.iugu.dev/v1/')
+  # end
 end
