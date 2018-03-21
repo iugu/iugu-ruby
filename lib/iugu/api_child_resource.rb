@@ -9,7 +9,7 @@ module Iugu
     end
 
     def create(attributes = {})
-      @fabricator.send "create", merge_params(attributes)
+      @fabricator.send "create", merge_params(attributes), token
     end
 
     def search(options = {})
