@@ -21,6 +21,17 @@ module Iugu
       false
     end
 
+    def capture
+      copy Iugu::Factory.create_from_response(self.class.object_type,
+                                              APIRequest.request('POST',
+                                                                 "#{self.class.url(self.id)}/capture"))
+      self.errors = nil
+      true
+    rescue Iugu::RequestWithErrors => ex
+      self.errors = ex.errors
+      false
+    end
+
     def refund
       copy Iugu::Factory.create_from_response(self.class.object_type,
                                               APIRequest.request('POST',
