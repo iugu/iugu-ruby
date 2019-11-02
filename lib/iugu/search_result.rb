@@ -12,5 +12,7 @@ module Iugu
     def results
       @results
     end
+
+    alias_method :count, :total
   end
 end

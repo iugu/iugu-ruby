@@ -3,12 +3,13 @@ require 'set'
 module Iugu
   class Object
 
-    attr_accessor :errors
+    attr_accessor :errors, :options
 
     undef :id if method_defined?(:id)
 
-    def initialize(attributes = {})
+    def initialize(attributes: {}, options: {})
       @unsaved_attributes = Set.new
+      @options = options
       set_attributes attributes
     end
 
@@ -53,6 +54,13 @@ module Iugu
         add_accessor(k)
       end
       @unsaved_attributes = @attributes.keys.to_set if unsaved
+    end
+
+    def api_key
+      @api_key ||=
+        begin
+          options[:api_key] || Iugu.api_key || Utils.auth_from_env
+        end
     end
 
     protected
