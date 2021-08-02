@@ -43,12 +43,11 @@ module Iugu
 
     def self.default_headers
       {
-        authorization: 'Basic ' + Base64.encode64(Iugu.api_key + ':'),
+        authorization: 'Basic ' + Base64.strict_encode64(Iugu.api_key + ':'),
         accept: 'application/json',
         accept_charset: 'utf-8',
         user_agent: 'Iugu RubyLibrary',
         accept_language: 'pt-br;q=0.9,pt-BR',
-        #content_type: 'application/x-www-form-urlencoded; charset=utf-8'
         content_type: 'application/json; charset=utf-8'
       }
     end
